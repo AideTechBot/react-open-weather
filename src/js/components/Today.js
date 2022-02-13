@@ -11,19 +11,19 @@ const Today = ({ current, unitsLabels, lang, theme }) => {
     current.temperature.max !== undefined;
   return (
     <div className="rw-today">
-      <div className={classes.date}>{current.date}</div>
+      {/* <div className={classes.date}>{current.date}</div> */}
       <div className={classes.hr} />
       <div className={classes.current}>
         {current.temperature.current} {unitsLabels.temperature}
       </div>
-      {hasRange && (
+      {/* {hasRange && (
         <div className={classes.range}>
           {current.temperature.max} / {current.temperature.min}{' '}
           {unitsLabels.temperature}
         </div>
-      )}
+      )} */}
       <div className={classes.desc}>{current.description}</div>
-      <div className={classes.hr} />
+      {/* <div className={classes.hr} />
       <div className={classes.info}>
         <div>
           {labels.wind}: <b>{current.wind}</b> {unitsLabels.windSpeed}
@@ -31,7 +31,7 @@ const Today = ({ current, unitsLabels, lang, theme }) => {
         <div>
           {labels.humidity}: <b>{current.humidity}</b> %
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
