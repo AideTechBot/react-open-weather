@@ -12,7 +12,7 @@ const useStyles = createUseStyles({
       theme.borderRadius ?? 5,
     ],
     composes: 'rw-container',
-    minHeight: '100vh',
+    minHeight: '270px',
   },
   main: {
     color: ({ theme }) => theme.locationFontColor,
@@ -26,6 +26,7 @@ const useStyles = createUseStyles({
         ? [[theme.borderRadius ?? 5, theme.borderRadius ?? 5, 0, 0]]
         : theme.borderRadius ?? 5,
     composes: 'rw-container-main',
+    minHeight: '270px',
   },
   header: {
     margin: [0, 0, 10, 0],
