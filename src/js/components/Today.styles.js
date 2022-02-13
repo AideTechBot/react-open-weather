@@ -2,11 +2,12 @@ import { createUseStyles } from 'react-jss';
 
 const useStyles = createUseStyles({
   date: {
+    fontSize: 24,
     color: ({ theme }) => theme.todayDateFontColor,
     composes: 'rw-today-date',
   },
   current: {
-    fontSize: 45,
+    fontSize: 95,
     color: ({ theme }) => theme.todayTempFontColor,
     composes: 'rw-today-current',
   },
@@ -18,7 +19,7 @@ const useStyles = createUseStyles({
   },
   desc: {
     color: ({ theme }) => theme.todayDescFontColor,
-    fontSize: 16,
+    fontSize: 24,
     composes: 'rw-today-desc',
   },
   info: {
