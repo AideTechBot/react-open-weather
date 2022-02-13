@@ -1,11 +1,13 @@
 import { createUseStyles } from 'react-jss';
 
+const _createBorderRadius = (e, n) => `${e[0] ? n : 0}px ${e[1] ? n : 0}px ${e[2] ? n : 0}px ${e[3] ? n : 0}px`;
+
 const useStyles = createUseStyles({
   container: {
     fontFamily: ({ theme }) => theme.fontFamily,
     fontSize: 13,
     boxShadow: ({ theme }) => theme.containerDropShadow,
-    borderRadius: '0 0 5px 5px',
+    borderRadius: ({theme}) => [0,0,theme.borderRadius ?? 5, theme.borderRadius ?? 5],
     composes: 'rw-container',
   },
   main: {
@@ -15,7 +17,7 @@ const useStyles = createUseStyles({
     background: ({ theme }) =>
       `linear-gradient(to bottom right, ${theme.gradientStart}, ${theme.gradientMid}, ${theme.gradientEnd})`,
     display: 'flex',
-    borderRadius: ({ showForecast }) => (showForecast ? [[5, 5, 0, 0]] : 5),
+    borderRadius: ({ showForecast, theme }) => (showForecast ? [[theme.borderRadius ?? 5, theme.borderRadius ?? 5, 0, 0]] : theme.borderRadius ?? 5),
     composes: 'rw-container-main',
   },
   header: {
